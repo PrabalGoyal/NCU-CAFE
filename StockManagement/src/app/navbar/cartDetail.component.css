@@ -1,0 +1,44 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  transition-duration: 0.4s;
+  transition-property: transform;
+  background-color: lightcoral;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.abc{
+    width: 50px;
+    height: 200px;
+}
+.container-fluid {
+    background-image: url(https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80.jpg)
+}
+.pricing-num {
+  text-shadow: 0 0 3px #FF0000;
+}

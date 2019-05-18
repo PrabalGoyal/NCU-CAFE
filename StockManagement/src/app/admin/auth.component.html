@@ -1,0 +1,72 @@
+
+
+<div id="pop" >
+
+<nav class="navbar navbar-expand-lg " style="background-color: #ffffff00;">
+		<a class="navbar-brand" style="color: beige">THE NORTHCAP UNIVERSITY CAFE</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+							<a class="nav-link btn" routerLink="/" style="color: beige">HOME</a>
+						</li>
+						
+				
+			</ul>
+		 
+		</div>  
+	</nav>
+
+   <div class="bg-danger mt-2 p-2 text-center text-white"
+    *ngIf="errorMessage != null">
+    {{errorMessage}}
+   </div>
+    
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" novalidate #form="ngForm" (ngSubmit)="authenticate(form)">
+					<div class="login100-form-avatar">
+						<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25b0662f-baba-4c62-a718-e39813b21fcc/dbzv60u-6a612170-8acb-431c-90b2-2f23c4fed6e0.png/v1/fill/w_894,h_894,q_70,strp/boy_by_joaslin_dbzv60u-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvMjViMDY2MmYtYmFiYS00YzYyLWE3MTgtZTM5ODEzYjIxZmNjXC9kYnp2NjB1LTZhNjEyMTcwLThhY2ItNDMxYy05MGIyLTJmMjNjNGZlZDZlMC5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.WhX7lNe7eRzwRU-OLX11xrmBbP_VDZY81HSdjb9XX8A" alt="AVATAR">
+					</div>
+
+					<span class="login100-form-title p-t-20 p-b-45">
+PARTH PRABAL
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<input class="input100" type="text" placeholder="Username" name="username"
+						[(ngModel)]="username" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+					<br>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						<input class="input100" placeholder="Password" type="password" name="password"
+						[(ngModel)]="password" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+					<br>
+
+					<div class="container-login100-form-btn p-t-10">
+						<button class="login100-form-btn" type="submit">
+							Login
+						</button>
+					</div>
+
+				
+
+				
+				</form>
+			</div>
+		</div>
+	</div>
+	

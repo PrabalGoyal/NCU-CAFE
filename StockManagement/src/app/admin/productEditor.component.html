@@ -1,0 +1,146 @@
+<div class="container">
+                <div class="row header">
+                  <h1>ADD PRODUCT</h1>
+                  <h3>Fill out the form below to Add more!</h3>
+                </div>
+              
+                <div class="bg-primary p-2 text-white text-center" [class.bg-warning]="editing"
+                [class.text-dark]="editing">
+                <h5>{{editing ? "Edit" : "Create"}} Product</h5>
+                </div>
+                <br>
+              
+              
+                <form novalidate #form="ngForm" (ngSubmit)="save(form)">
+                <div class="form-group">
+                <label> Product Name</label>
+                <input required type="text" maxlength="64" class="form-control" name="name" #name="ngModel"
+                [(ngModel)]="product.name" />
+              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors.required">
+                  Name is required.
+                </div>
+                <div *ngIf="name.errors.minlength">
+                  Name must be atleast 4 characters long.
+                </div>
+              </div>
+                </div>
+              
+
+
+                <div class="form-group">
+                                <label for="validation Textarea"> Stock Entry Date</label>
+                                <input required type="date" max="2019-05-14" class="form-control date-validation" #date="ngModel" name="date"
+                                [(ngModel)]="product.stockentrydate" />
+                              <div *ngIf="date.invalid && (date.dirty || date.touched)" class="alert alert-danger">
+                                <div *ngIf="date.errors.required">
+                                  Date is invalid.
+                                </div>
+                                <div *ngIf="date.errors.max">
+                                  No future dates allowed.
+                                </div>
+                              </div>
+                </div>
+
+
+                
+                <div class="form-group">
+                                <label>Category</label>
+                                <select [(ngModel)]='product.category' class='form-control' required name="category" #category="ngModel">
+                                                <option value='BAKERY'>Bakery</option>
+                                                <option value='BISCUIT'>Biscuits</option>
+                                                <option value='FOOD'>Food</option>
+                                                <option value='PACKED SNACKS'>Packed Snacks</option>
+                                                <option value='SOFT DRINK'>Soft Drink</option>
+                                                <option value='DESSERTS'>Desserts</option>
+
+
+                                              </select>
+                                              <div *ngIf="category.invalid && (category.dirty || category.touched)" class="alert alert-danger">
+                                                <div *ngIf="category.errors.required">
+                                                  Category is required.
+                                                </div>
+                                              </div>
+                              </div>
+
+
+
+               
+                <div class="form-group">
+                        <label for="validation Textarea"> FOOD image</label>
+                        <input class="form-control" name="image" type="url" [(ngModel)]="product.image" alt="Image path not working">
+                </div>
+              
+              
+                <div class="form-group">
+                                <label for="validation Textarea"> Quantity</label>
+                                <input type="number" max="2147483647" min="0" class="form-control" required #quantity="ngModel" name="quantity"
+                                [(ngModel)]="product.remaininginventory" pattern="^[0-9]{1,4}[:.,-]?$"/>
+                              <div *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)" class="alert alert-danger">
+                                <div *ngIf="quantity.errors.required">
+                                  Quantity is required.
+                                </div>
+                                <div *ngIf="quantity.errors.pattern">
+                                  Quantity should be positive, at max 4 digit number.
+                                </div>
+                              </div>
+              
+                </div>    
+              
+                <div class="form-group">
+                        <label for="validation Textarea"> Remaining Inventory</label>
+                        <input class="form-control" name="remaininginventory" disabled type="number" id="myNumber" value="1"
+                        [(ngModel)]="product.remaininginventory" required readonly/>
+                </div>    
+              
+
+                <div class="form-group">
+                        <label for="validation Textarea"> Product Type</label>
+                        <select required [(ngModel)]='product.producttype' class='form-control' #type="ngModel" name="producttype">
+                                        <option value='perishable'>Perishable</option>
+                                        <option value='nonperishable'>Non-Perishable</option>
+                                      </select>
+                                      <div *ngIf="type.invalid && (type.dirty || type.touched)" class="alert alert-danger">
+                                        <div *ngIf="type.errors.required">
+                                          Type is required.
+                                        </div>
+                                      </div>
+                        </div>    
+              
+              
+              
+                <div class="form-group">
+                <label for="validation Textarea"> Company</label>
+                <input required class="form-control" name="company" #company="ngModel"  [(ngModel)]="product.company" />
+                <div *ngIf="company.invalid && (company.dirty || company.touched)" class="alert alert-danger">
+                    <div *ngIf="company.errors.required">
+                      Company is required.
+                    </div>
+                  </div>
+                </div>    
+
+
+
+                <div class="form-group">
+                <label for="validation Textarea">Description</label>
+                <textarea required class="form-control" name="description" #description="ngModel" [(ngModel)]="product.description">
+                        </textarea>
+                         <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+                           <div *ngIf="description.errors.required">
+                             Description is required.
+                           </div>
+                         </div>
+                </div>
+                
+                
+                <div *ngIf="formnotvalid == 1" class="bg-primary p-2 text-white text-center bg-danger">
+                    Form is not valid
+                </div>
+                <button [class.disabled]="!form.valid" type="submit" class="btn btn-primary" [class.btn-warning]="editing" >
+                {{editing ? "Save" : "Create"}}
+                </button>
+                <button type="reset" class="btn btn-secondary" routerLink="/admin/main/products">
+                Cancel
+                </button>
+                </form>
+                

@@ -1,0 +1,189 @@
+#hello {
+    background: url(http://www.ezyhealth.com/magazine/wp-content/uploads/2015/03/iStock_000046272610_Large.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#every{
+  margin: 0px 400px 0px 20px;
+}
+#lol{
+  /* box-align: left; */
+}
+#lol button{
+    /* padding: 0em 0em; */
+    /* width:270px; */
+    background: #ff6e00;
+  
+    border-radius:15px;
+    /* border:0; */
+    color:#fff;
+    font-size:1.2em;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    cursor:pointer;
+    margin:1em 28em 1em -25em;
+    text-transform:uppercase;
+}
+
+
+.bounce:hover{
+animation:bounce 1s;
+-webkit-animation:bounce 1s;
+
+}
+
+@keyframes bounce {
+0% {
+    border-radius:15px;
+}
+20% {
+    border-radius:30px;
+}  
+60% {
+    border-radius:0px;
+    transform:scale(1.1);
+        -ms-transform:scale(1.1); /* IE 9 */
+        -webkit-transform:scale(1.1); /* Safari and Chrome */        
+}
+90% { 
+    transform:scale(0.98);
+        -ms-transform:scale(0.98); /* IE 9 */
+        -webkit-transform:scale(0.98); /* Safari and Chrome */         
+}
+100% { 
+    border-radius:15px;     
+}
+}
+    
+@-webkit-keyframes bounce {
+0% {
+    border-radius:15px;
+}
+20% {
+    border-radius:30px;
+}  
+60% {
+    border-radius:0px;
+    transform:scale(1.1);
+        -ms-transform:scale(1.1); /* IE 9 */
+        -webkit-transform:scale(1.1); /* Safari and Chrome */
+}
+90% { 
+    transform:scale(0.98);
+        -ms-transform:scale(0.98); /* IE 9 */
+        -webkit-transform:scale(0.98); /* Safari and Chrome */         
+}
+100% { 
+    border-radius:15px;     
+}
+}     
+
+.letters{
+/* white-space:nowrap; */
+/* overflow:hidden; */
+transition: letter-spacing 3s;
+-webkit-transition: letter-spacing 3s; /* Safari */
+transition-delay: 0.5s;
+-webkit-transition-delay: 0.5s;
+}
+
+.letters:hover{
+letter-spacing:15.5px;
+transition-delay: 0s;
+-webkit-transition-delay: 0s;  
+}
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 30%;
+
+    
+  }
+
+  #gupta{
+    margin: 10px 0px 0px 0px;
+
+
+  }
+
+  #goyal{
+    margin: 8px 10px 0px 0px;
+
+  }
+  
+  .card {
+    background-color: white;
+    height: 440px;
+    width: 300px;
+    border-radius:15px;
+    margin:1em 28em 1em 2em;
+    box-shadow: 0px 0px 80px black;
+  }
+  
+  .header img{
+    height: 280px;
+    width: 280px;
+    margin: 10px 10px 10px 10px;
+    /* background-image: url(http://del.h-cdn.co/assets/17/31/1600x800/landscape-1501791674-delish-chicken-curry-horizontal.jpg); */
+    background-size:cover;
+    
+  }
+/*   
+  .body {
+    height: 65%;
+    width: 100%;
+    background-color: eggshell;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  } */
+  #sister{
+    text-align: center;
+  }
+  #mom{
+    margin: 15px 0px 10px 11px;
+    width: 275px;
+    height: 25px;
+
+  }
+
+  #dad{
+    margin: 8px 0px 10px 65px;
+    width: 175px;
+    height: 40px;;
+  }
+
+  h1{
+    position: relative;
+    /* top: -20px; */
+    color: black;
+    margin: -8px 0px 0px 11px;
+  }
+  h6 {
+    color: black;
+    margin-left: 10px;
+  }
+  .spacer {
+      width: 60px;
+    height: 60px;
+  }
+  
+  .recipe {
+    height: 70%;
+    width: 100%;
+    align-self: flex-start;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    
+  }
+  

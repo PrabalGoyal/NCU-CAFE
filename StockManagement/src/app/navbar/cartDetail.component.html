@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+    <h2 style="text-align:center">Product Details</h2>
+
+    <div class="card" *ngFor="let line of cart.lines">
+      <img src="{{line.product.image}}" style="width:100%" class="abc">
+      <h4>Details</h4>
+        
+        <p class="prices"><B>Product Name : </B> <span class="pricing-num">{{line.product.name}}</span></p>                
+        <p class="prices"><B>Stock Entry Date : </B><span class="pricing-num">{{line.product.stockentrydate}}</span></p>
+        <p class="prices"><B>Product Category : </B><span class="pricing-num">{{line.product.category}}</span></p>
+        <p class="prices"><B>Remaining Inventory : </B><span class="pricing-num">{{line.product.remaininginventory}}</span></p>
+
+        <p class="prices"><B>Product Type : </B><span class="pricing-num">{{line.product.producttype}}</span></p>
+
+        <p class="prices"><B>Company : </B> <span class="pricing-num">{{line.product.company}}</span></p>
+        <p class="prices"><B>Price : </B><span class="pricing-num">{{line.product.price}}</span></p>
+        <p class="prices"><B>Description : </B><span class="pricing-num">{{line.product.description}}</span></p>
+        <button type="reset" class="btn btn-secondary" routerLink="/home/main/products">
+          Back
+          </button>
+     
+    </div>
+  </div>

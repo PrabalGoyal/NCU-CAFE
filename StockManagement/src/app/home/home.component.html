@@ -1,0 +1,152 @@
+<div id="hello" class="container-fluid" >
+  <nav class="navbar navbar-expand-lg " style="background-color: #ffffff00;">
+  <!-- <a  class="navbar-brand" style="color: #FF6E00"><b>THE NORTHCAP UNIVERSITY CAFE </b></a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <a id="every" class="navbar-brand" style="color: beige"><b>THE NORTHCAP UNIVERSITY CAFE </b></a>
+
+      <li id="gupta" style="color: beige" ><iframe src="http://free.timeanddate.com/clock/i6rh7sbk/n176/fs18/fcf5f5dc/tct/pct/th2/ts1" frameborder="0" width="121" height="23" allowTransparency="true"></iframe>
+      </li>
+      <li id="goyal" style="color: beige">|</li>
+           <li class="nav-item">
+        <a class="nav-link btn" routerLink="/admin" style="color: beige">ADMIN</a>
+      </li>
+      
+    </ul>
+   
+  </div>  
+</nav>
+
+    <div class="row">
+      <div id="lol" class="container col-sm-4">
+        
+        <button class="letters" (click)="changeCategory()" >          <img src="https://image.flaticon.com/icons/svg/1689/1689228.svg" height="30px" width="30px"><br>
+          All Categories</button>
+        
+        <button *ngFor="let cat of categories" class="bounce"
+          [class.active]="cat == selectedCategory" (click)="changeCategory(cat)">
+          <img src="https://image.flaticon.com/icons/svg/45/45332.svg" height="30px" width="30px">
+          {{cat}}
+        </button>       
+       
+        <button class="letters " routerLink="/admin">
+          <img src="https://image.flaticon.com/icons/svg/345/345736.svg" height="30px" width="30px">
+Manager Login        </button>
+         
+        
+      </div>       
+      </div>
+
+       
+         <div class="row">   
+           
+          <div class="container col-lg-3 " *ngFor="let product of products">
+            
+            <div class="bounce"  >
+                <span *ngIf="product.remaininginventory < 1" class="btn btn-danger"></span>
+
+
+          <div class="card" >
+
+            
+            <div class="header" (click)="addProductToCart(product)">
+                <img src="{{product.image}}">
+            </div>
+             
+            <div >
+              <h1 >{{product.name}}</h1>
+              <span *ngIf="product.remaininginventory == 0" class="btn btn-danger">OUT OF STOCK</span>
+              <!-- <h6><u><b>About</b></u> ::{{product.description}} </h6>              -->
+              <span id="mom" class="badge badge-pill badge-info float-left" ><span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Remaining Inventory = {{product.remaininginventory}}</span>
+              <br>
+
+              
+              <button id="dad" class="badge badge-pill badge-light " 
+              (click)="product.remaininginventory = product.remaininginventory-1" *ngIf="product.remaininginventory" > 1 Item Sold</button>
+                  <!-- <button class="badge badge-pill badge-success float-right"
+                  >
+                  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Product Detail</button> -->
+                  
+                  </div>
+          </div>
+        </div>
+        
+        </div>
+
+ 
+      </div>
+       <div id="sister" class="bouncer ">
+          <div class="spinner-grow text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-info" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            
+            <div class="spinner-grow text-dark" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-light" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+          <button *ngFor="let page of pageNumber" (click)="changePage(page)"
+          class="btn btn-outline-info" [class.active]="page == selectedPage">
+             {{page}}
+        </button>
+        
+          
+         
+         
+          
+          
+          <div class="spinner-grow text-light" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <div class="spinner-grow text-danger" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-secondary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+
+          <div class="spinner-grow text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            
+             
+               
+                 
+                   
+
+        </div>
+        
+  </div>

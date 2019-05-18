@@ -1,0 +1,53 @@
+<div id="riya">
+  <nav class="navbar navbar-expand-lg " style="background-color: #ffffff00;">
+      <a class="navbar-brand" style="color: #9D1334"><b>THE NORTHCAP UNIVERSITY CAFE</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          
+            <li class="nav-item">
+                <a class="nav-link btn" routerLink="/home" style="color: #9D1334">HOME</a>
+              </li>
+               <li class="nav-item">
+            <a class="nav-link btn" routerLink="/admin" style="color:#9D1334">ADMIN</a>
+          </li>
+          
+        </ul>
+       
+      </div>  
+    </nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+    <div class="col bg-dark text-white text-center" >
+    <a class="navbar-brand">STOCK DESCRIPTION - CONFIDENTIAL</a>
+    </div>
+    </div>
+    <div class="row mt-2">
+    <div class="col-3">
+    <button class="btn btn-outline-info btn-block"
+    routerLink="/admin/main/products"
+    routerLinkActive="active">
+    Products
+    </button>
+    <button class="btn btn-info btn-block"
+    routerLink="/admin/main/products/create"
+    routerLinkActive="active">
+    Create New Products
+    </button> 
+    
+
+    <button class="btn btn-outline-danger btn-block" (click)="logout()">
+    Logout
+    </button>
+    </div>
+    <div class="col-9">
+    <router-outlet></router-outlet>
+    </div>
+    </div>
+   </div>
+  </div>
