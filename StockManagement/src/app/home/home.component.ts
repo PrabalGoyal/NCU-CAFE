@@ -14,7 +14,7 @@ import { count } from 'rxjs/operators';
 export class HomeComponent {
 public selectedCategory = null;
 public selectedPage = 1;
-public productsPerPage = 4;
+public productsPerPage = 8;
   itemCount: number;
   lines: any;
 
