@@ -5,12 +5,6 @@
     -o-background-size: cover;
     background-size: cover;
 }
-#every{
-  margin: 0px 400px 0px 20px;
-}
-#lol{
-  /* box-align: left; */
-}
 #lol button{
     /* padding: 0em 0em; */
     /* width:270px; */
@@ -23,7 +17,6 @@
     font-family: Arial,Helvetica,sans-serif;
     font-weight:bold;
     cursor:pointer;
-    margin:1em 28em 1em -25em;
     text-transform:uppercase;
 }
 
@@ -95,15 +88,6 @@ transition-delay: 0s;
 -webkit-transition-delay: 0s;  
 }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 30%;
-
-    
-  }
-
   #gupta{
     margin: 10px 0px 0px 0px;
 
@@ -117,21 +101,18 @@ transition-delay: 0s;
   
   .card {
     background-color: white;
-    height: 440px;
-    width: 300px;
     border-radius:15px;
-    margin:1em 28em 1em 2em;
     box-shadow: 0px 0px 80px black;
   }
   
-  .header img{
+  /* .header img{
     height: 280px;
     width: 280px;
     margin: 10px 10px 10px 10px;
-    /* background-image: url(http://del.h-cdn.co/assets/17/31/1600x800/landscape-1501791674-delish-chicken-curry-horizontal.jpg); */
+    background-image: url(http://del.h-cdn.co/assets/17/31/1600x800/landscape-1501791674-delish-chicken-curry-horizontal.jpg);
     background-size:cover;
     
-  }
+  } */
 /*   
   .body {
     height: 65%;
@@ -147,15 +128,8 @@ transition-delay: 0s;
   }
   #mom{
     margin: 15px 0px 10px 11px;
-    width: 275px;
     height: 25px;
 
-  }
-
-  #dad{
-    margin: 8px 0px 10px 65px;
-    width: 175px;
-    height: 40px;;
   }
 
   h1{
@@ -186,4 +160,3 @@ transition-delay: 0s;
     width: 100%;
     
   }
-  
